@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    
+
+<body>
+    <div class="container1">
+        <h1>To do List</h1>
+    </div>
+    <div class="container" >
+        <form action="/update/{{todo.sr_no}}" method="post">
+            
+              <div class="mb-3">
+                <label for="title" class="form-label" >Title of task </label>
+                <input type="text" id="title" name="title" class="form-control" value="{{todo.title}}" required>
+              </div>
+              
+              <div class="mb-3">
+                <label for="desc" class="form-label" >Task Description</label>
+                <input type="text" id="desc" name="desc" class="form-control" value="{{todo.desc}}" required >
+              </div>
+              
+             
+              <button type="submit" class="btn btn-outline-dark btn-sm mx-1">Update Task</button>
+            
+          </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+</body>
+{% endblock body %}
